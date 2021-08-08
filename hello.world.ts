@@ -1,2 +1,2 @@
-const firstWords:string = "hello world"
+const firstWords:string = 2
 console.info(firstWords);
