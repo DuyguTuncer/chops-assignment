@@ -12,6 +12,10 @@ Road-map for the project:
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+note: 
+ -main branch is used for JS code, and unit test. First 11 step has only been made in main branch.
+ -new branch: duyguTS is created to integrate TS to the assignment. all TS related commits has been made from this branch.
+
 Steps that are followed:
 
 1) Split() method is applied to the data argument, to make each word in string that gets passed via the argument -data- as an array item, so that array methods can be applicable for the next steps.
@@ -36,6 +40,11 @@ Steps that are followed:
 10)Function returns to the JoinedArray, to render the final result.
 
 11)Unit test, Jest is applied with different scenerios during the process, and after the function is finalized.
+
+12)JS implementations and unit tests are completed on 11th Step. New Github branch named duyguTS is created in order
+to integrage typeScript to the assignment. From this step on, all commits has been made to the new branch.
+
+13)Type annotations are added to the funtion arguments, different scenerios are tested.
 
 
 

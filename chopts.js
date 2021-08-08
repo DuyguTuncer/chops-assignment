@@ -9,7 +9,7 @@ function chop(data, template) {
         var newArray = splitedData.map(function (item) {
             if (item.slice(0, 2) === "{{" &&
                 item.slice(item.length - 2, item.length) === "}}") {
-                var prop;
+                var prop = "";
                 for (prop in template) {
                     if (item.indexOf(prop) >= 0) {
                         item = item.replace(item, template[prop]);
