@@ -27,6 +27,9 @@ function chop (data, template) {
         console.log("joinedArray", joinedArray)
         return joinedArray;
     }
+    else {
+        return "data type of the argument does not match with the requirements"
+    }
 }
 
 chop(
