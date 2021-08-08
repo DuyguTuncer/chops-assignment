@@ -8,30 +8,17 @@ function chop (data, template) {
         return "wrong data type"
     } else if (typeof data == "string" && typeof template == "object") {
 
-         const splitedData = data.split(" ");
-        //  console.log("splitedData", splitedData);
-      
-        let filteredData = splitedData.filter((item) => {
-            if (
-                item.slice(0, 2) === "{{" &&
-                item.slice(item.length - 2, item.length) === "}}"
-            ) {
-                return item;
-            }
-        });
+        const splitedData = data.split(" ");
 
-         const newArray = splitedData.map((item) =>  {
-            // console.log("mapping over item", item)
+        const newArray = splitedData.map((item) =>  {
             if (
                 item.slice(0, 2) === "{{" &&
                 item.slice(item.length - 2, item.length) === "}}") {
-                //  console.log("item" , item)
                 for(prop in template) {
                     if (item.indexOf(prop) >= 0){
                         item = item.replace(item, template[prop])
                     }
                 } 
-                // console.log("item", item)
                 return item; 
             } else {
                 return item;

@@ -23,4 +23,4 @@ Road-map for the project:
  -Arter this step, filter method is applied to filter the items in the curly brackets." 
  -Slice() method is applied to filter the string items that has double curly brackets on the beggining and at the end.
 
-2)
+2) 
