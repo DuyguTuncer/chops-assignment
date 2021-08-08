@@ -22,23 +22,38 @@ function chop (data, template) {
         });
         console.log("filteredData:", filteredData);
 
-         filteredNamesOfProps = [];
-        for (let i = 0; i <= filteredData.length - 1; i++) {
-            let str = filteredData[i];
-            let cleanStr = str.substring(2, str.length - 2);
-            filteredNamesOfProps.push(cleanStr);
-        }
-        console.log("filteredNamesOfProps is: ", filteredNamesOfProps);
+        //  filteredNamesOfProps = [];
+        // for (let i = 0; i <= filteredData.length - 1; i++) {
+        //     let str = filteredData[i];
+        //     let cleanStr = str.substring(2, str.length - 2);
+        //     filteredNamesOfProps.push(cleanStr);
+        // }
+        // console.log("filteredNamesOfProps is: ", filteredNamesOfProps);
 
-        let arrayOfPropsValues = [];
-        for (let i = 0; i <= filteredNamesOfProps.length - 1; i++) {
-            arrayOfPropsValues.push(template[filteredNamesOfProps[i]]);
-        }
-        console.log("arrayOfPropsValues", arrayOfPropsValues);
+        // let arrayOfPropsValues = [];
+        // for (let i = 0; i <= filteredNamesOfProps.length - 1; i++) {
+        //     arrayOfPropsValues.push(template[filteredNamesOfProps[i]]);
+        // }
+        // console.log("arrayOfPropsValues", arrayOfPropsValues);
 
          const newArray = splitedData.map((item) =>  {
-            console.log("mapping over item", item)
+            // console.log("mapping over item", item)
+            if (
+                item.slice(0, 2) === "{{" &&
+                item.slice(item.length - 2, item.length) === "}}"
+            ) {
+                 console.log("item" , item)
+                 for(prop in template){
+                      item = item.replace(item, "a")
+                 }
+
+                return item;
+            } else {
+                return item;
+            }
+           
          })
+          console.log("newArray", newArray)
 
 
 
