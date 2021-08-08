@@ -1,0 +1,22 @@
+{
+  "name": "chops-assignment",
+  "version": "1.0.0",
+  "description": "So, here we start! This lines are written for the first commit.",
+  "main": "chop.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DuyguTuncer/chops-assignment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DuyguTuncer/chops-assignment/issues"
+  },
+  "homepage": "https://github.com/DuyguTuncer/chops-assignment#readme",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
+}
