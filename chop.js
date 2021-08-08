@@ -23,7 +23,9 @@ function chop (data, template) {
 
         console.log("filteredData:", filteredData);
 
-        return filteredData;
+        
+
+        return;
     }
 }
 
