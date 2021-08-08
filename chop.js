@@ -20,46 +20,32 @@ function chop (data, template) {
                 return item;
             }
         });
-        console.log("filteredData:", filteredData);
-
-        //  filteredNamesOfProps = [];
-        // for (let i = 0; i <= filteredData.length - 1; i++) {
-        //     let str = filteredData[i];
-        //     let cleanStr = str.substring(2, str.length - 2);
-        //     filteredNamesOfProps.push(cleanStr);
-        // }
-        // console.log("filteredNamesOfProps is: ", filteredNamesOfProps);
-
-        // let arrayOfPropsValues = [];
-        // for (let i = 0; i <= filteredNamesOfProps.length - 1; i++) {
-        //     arrayOfPropsValues.push(template[filteredNamesOfProps[i]]);
-        // }
-        // console.log("arrayOfPropsValues", arrayOfPropsValues);
+        // console.log("filteredData:", filteredData);
 
          const newArray = splitedData.map((item) =>  {
             // console.log("mapping over item", item)
             if (
                 item.slice(0, 2) === "{{" &&
-                item.slice(item.length - 2, item.length) === "}}"
-            ) {
-                 console.log("item" , item)
-                 for(prop in template){
-                      item = item.replace(item, "a")
-                 }
+                item.slice(item.length - 2, item.length) === "}}") {
+                //  console.log("item" , item)
+                for(prop in template) {
+                    if (item.indexOf(prop) >= 0){
+                        // console.log("item.indexOf(prop)", item.indexOf(prop))
+                        item = item.replace(item, template[prop])
+                    }
+                } 
+                console.log("item", item)
+                return item; 
 
-                return item;
             } else {
+
                 return item;
             }
            
          })
           console.log("newArray", newArray)
 
-
-
-
-
-        return;
+        return newArray;
     }
 }
 

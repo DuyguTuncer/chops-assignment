@@ -12,8 +12,22 @@ const chop = require('./chop');
 //   expect(chop("heyyyooooo", null)).toBe("wrong data type");
 // });
 
-test('Run the test with filteredData', () => {
+// test('Run the test with filteredData', () => {
+//   expect(chop("I have many things in my fridge such as {{bread}} {{focaccio}} {{salmon}} say {{hallo}}",
+//     { bread: "essential", salmon: "delicioussy", focaccio: "carby", hallo: "meal" })).
+//     toBe([ '{{bread}}', '{{focaccio}}', '{{salmon}}', '{{hallo}}' ]);
+// });
+
+test('Run the test with newArray', () => {
   expect(chop("I have many things in my fridge such as {{bread}} {{focaccio}} {{salmon}} say {{hallo}}",
     { bread: "essential", salmon: "delicioussy", focaccio: "carby", hallo: "meal" })).
-    toBe([ '{{bread}}', '{{focaccio}}', '{{salmon}}', '{{hallo}}' ]);
+    toBe([
+  'I',      'have',
+  'many',   'things',
+  'in',     'my',
+  'fridge', 'such',
+  'as',     'essential',
+  'carby',  'delicioussy',
+  'say',    'meal'
+]);
 });
