@@ -4,8 +4,7 @@ function chop (data, template) {
         Array.isArray(template) ||
         typeof template === "function"
     ) {
-        console.log("data type is not right");
-        return "wrong data type"
+        return "data type of the argument does not match with the requirements"
     } else if (typeof data == "string" && typeof template == "object") {
 
         const splitedData = data.split(" ");

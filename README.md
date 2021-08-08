@@ -4,13 +4,7 @@ Road-map for the project:
 
 1) Check the data types with if-else statements to make sure that the arguments that get passed are the desired data types, if not, give error.
 
-2) Use string methods and iterators (array methods) in order to:
-    
-    - use split() method the data to use array methods,
-    - clear the curly brackets from the string items that is passed with data argument,
-    - access the value of the property that gets passed with the template argument,
-    - replace the values (the one in the curly brackes with the value of the properties),
-    - take the replaced values and render it as the whole string.
+2) Use string methods and iterators (array methods) to reach the final result.
 
 3) Integrate Typescript, use type annotations to make sure to pass the right values.
 
@@ -18,9 +12,31 @@ Road-map for the project:
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-1) "Split method is applied to the data argument, to make each word in string that gets passed via the argument -data- as an array item, so that array methods can be applicable on the next steps. 
+Steps that are followed:
 
- -Arter this step, filter method is applied to filter the items in the curly brackets." 
- -Slice() method is applied to filter the string items that has double curly brackets on the beggining and at the end.
+1) Split() method is applied to the data argument, to make each word in string that gets passed via the argument -data- as an array item, so that array methods can be applicable for the next steps.
+    for this purpose by appliying split() method, splitedData array is created.
 
-2) 
+2) map() method is applied to the splitedData array. newArray is created with this action.
+
+3) in order to map the array items that is wrapped with curly brackets, if statement is created. In if statement, slice method is applied.
+
+4)For the items that is wrapped with the curly brackets, for in method is used to loop over, and replace() method is used to replace the current values, with the value of the properties that is passed with the template argument.
+
+5)For the other items that is not wrapped with the curly brackets, I simply returned the items itself, so that they end up in the array as the way they are.
+
+6)For the items that are wrapped with curly brackets, another if statement is created to check index of the item to see that if they matches with the index of the property that is being mapped over.
+
+7)After replace() method is being applied, and items in the curly brackets are replaced with the value of the properties that is passed with the template argument, I returned those items, so that they end up in newArray.
+
+8)In this step, our newArray have the desired result.
+
+9)Therefore join() method is applied to newArray to convert it to the string. joinedArray is created.
+
+10)Function returns to the JoinedArray, to render the final result.
+
+11)Unit test, Jest is applied with different scenerios during the process, and after the function is finalized.
+
+
+
+ 
