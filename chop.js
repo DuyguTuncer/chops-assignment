@@ -7,7 +7,6 @@ function chop (data, template) {
         console.log("data type is not right");
         return "wrong data type"
     } else if (typeof data == "string" && typeof template == "object") {
-        // console.log("data type is right.");
 
          const splitedData = data.split(" ");
         //  console.log("splitedData", splitedData);
@@ -20,7 +19,6 @@ function chop (data, template) {
                 return item;
             }
         });
-        // console.log("filteredData:", filteredData);
 
          const newArray = splitedData.map((item) =>  {
             // console.log("mapping over item", item)
@@ -30,22 +28,18 @@ function chop (data, template) {
                 //  console.log("item" , item)
                 for(prop in template) {
                     if (item.indexOf(prop) >= 0){
-                        // console.log("item.indexOf(prop)", item.indexOf(prop))
                         item = item.replace(item, template[prop])
                     }
                 } 
-                console.log("item", item)
+                // console.log("item", item)
                 return item; 
-
             } else {
-
                 return item;
             }
-           
          })
-          console.log("newArray", newArray)
-
-        return newArray;
+        let joinedArray = newArray.join(" ");
+        console.log("joinedArray", joinedArray)
+        return joinedArray;
     }
 }
 
