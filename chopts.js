@@ -29,4 +29,4 @@ function chop(data, template) {
         return "data type of the argument does not match with the requirements";
     }
 }
-chop(2, { bread: "essential", salmon: "delicioussy", focaccio: "carby", hallo: "meal" });
+chop("I have many things in my fridge such as {{bread}} {{focaccio}} {{salmon}} say {{hallo}}", { bread: "essential", salmon: "delicioussy", focaccio: "carby", hallo: "meal" });
