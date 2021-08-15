@@ -14,7 +14,7 @@ Road-map for the project:
 
 Steps that are followed:
 
-note: -main branch is used for JS code, and unit test. First 11 steps have only been made in main branch. -new branch: duyguTS is created to integrate TS to the assignment. all TS-related commits have been made from this branch.
+note: main branch is used for JS code, and unit test. First 11 steps have only been made in main branch. -new branch: duyguTS is created to integrate TS to the assignment. all TS-related commits have been made from this branch.
 
 1) Split() method is applied to the data argument, to make each word in string that gets passed via the argument -data- as an array item, so that array methods can be applicable for the next steps.
     for this purpose by applying split() method, splitedData array is created.
